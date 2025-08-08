@@ -1,16 +1,12 @@
-# mi_sitio_app
+Aplicación webview que muestra un catálogo fijo de series
 
-A new Flutter project.
+## Crear la app:
+``` bash
+flutter build apk --release
+```
+## Ejemplo
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![photo_2025-08-08_19-57-36](https://github.com/user-attachments/assets/ea041663-cf41-4db6-a3a8-cbeac0568818)
+![photo_2025-08-08_19-57-32](https://github.com/user-attachments/assets/4db6fe19-c0cf-4f93-874b-825e83f0055c)
+![photo_2025-08-08_19-57-29](https://github.com/user-attachments/assets/1e27b1a4-7be3-4ea1-9629-28746bb85394)
+![photo_2025-08-08_19-57-10](https://github.com/user-attachments/assets/ef5f1f16-158c-491a-ba88-9044da77cecc)

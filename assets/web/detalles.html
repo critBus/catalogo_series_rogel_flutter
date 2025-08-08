@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Series TV</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="js/tailwin.js"></script>
+    <style>
+        /* Fuente Inter */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Estilos para ocultar la barra de desplazamiento en la sección de categorías */
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+        /* Estilo para el menú desplegable, inicialmente oculto */
+        .dropdown-menu {
+            display: none;
+        }
+        .dropdown-menu.active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-gray-800 min-h-screen flex flex-col">
+    <!-- Encabezado de la aplicación -->
+    <header class="bg-gradient-to-r from-red-600 to-orange-700 p-4 text-white shadow-md rounded-b-lg z-10 sticky top-0">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-3">
+            <img src="img/logo-rogerseries.png" alt="" class="w-10 h-10">
+            <h1 class="text-2xl font-bold">Rogerseries</h1>
+           </div>
+            <!-- Botón de hamburguesa -->
+            <button id="menuButton" class="text-white focus:outline-none p-2 rounded-md hover:bg-gray-700 transition-colors duration-200">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        <!-- Menú desplegable -->
+        <div id="dropdownMenu" class="dropdown-menu absolute right-0 my-4 w-48 bg-gray-600 rounded-md shadow-lg py-4 ring-1 ring-black ring-opacity-5 focus:outline-none z-20">
+            <a href="listado.html" class="block px-4 py-2 text-sm text-gray-100 hover:bg-orange-600 rounded-md">Listados</a>
+            <a href="imagenes.html" class="block px-4 py-2 text-sm text-gray-100 hover:bg-orange-600 rounded-md">Imágenes</a>
+            <a href="info.html" class="block px-4 py-2 text-sm text-gray-100 hover:bg-orange-600 rounded-md">Info</a>
+        </div>
+        <!-- Barra de búsqueda -->
+            <!-- <div class="mt-2">
+                <input
+                    type="text"
+                    placeholder="Buscar series..."
+                    class=" bg-gray-100 text-gray-500 w-full p-3 border border-red-500 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-300">
+            </div> -->
+    </header>
+
+    <!-- Contenedor principal de la aplicación -->
+        <main class="flex-grow container mx-auto p-4">
+            <a href="" id="volver-atras">
+              <div class="flex mb-8 text-white bg-blue-600 hover:bg-blue-700 rounded-lg p-2 w-36">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>Volver atras</div></a>
+            <!-- Info Section -->
+            <section class="mb-24">
+              <div class="lg:grid grid-cols-2 gap-4 bg-gray-500 rounded-lg shadow-md p-4" id="idContenido">
+                <div class="">
+                  <img
+                    src="img/p/{image}"
+                    alt="imagen detalle"
+                    class="flex justify-center w-full h-72 rounded-md"
+                  />
+                </div>
+                <div>
+                <h1 class="text-gray-100 text-lg mb-4 mt-4">
+                  <strong>Descripcion</strong>
+                </h1>
+            <div class="text-gray-100 text-sm">
+                <p><strong class="text-gray-900">Nombre:</strong>  {título}</p>
+                <p><strong class="text-gray-900">Género:</strong>  {genero}</p>
+                <p><strong class="text-gray-900">Temporadas:</strong>  {temporada}</p>
+                <p><strong class="text-gray-900">Año:</strong>  {año}</p>
+                <p><strong class="text-gray-900">Idioma:</strong>  {idioma}</p>
+                <p><strong class="text-gray-900">Pais:</strong>  {pais}</p>
+            </div>
+            <div class="text-gray-100 text-sm mt-2">
+                <p><strong class="text-gray-900">Sinopsis:</strong>  {Sinopsis}</p>
+            </div>
+              </div>
+            </div>
+            </section>
+          </main>
+
+    <!-- Pie de página (opcional) -->
+    <footer class="bg-gray-800 p-4 text-white text-center text-sm mt-6 rounded-t-lg fixed bottom-0 left-0 right-0">
+        <div class="flex justify-around mb-4">
+        <a href="index.html" class="flex flex-col items-center text-white hover:text-orange-400 transition-colors duration-200">
+            <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2 2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+            </svg>
+        </a>
+        <a href="info.html#cont" class="flex flex-col items-center text-white hover:text-orange-400 transition-colors duration-200">
+            <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path>
+            </svg>
+        </a>
+        <a href="#" class="flex flex-col items-center text-white hover:text-orange-400 transition-colors duration-200">
+            <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            </svg>
+        </a>
+      </div>
+        <p class="text-sm">&copy; 2025 Catálogo de Series TV. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/series.js" type="text/javascript"></script>
+    <script src="js/repetidor.js"></script>
+    <script src="js/actualizador.js"></script>
+
+    <script>
+        console.log(`2 get ${get(LLAVE_INDICE)}`);
+        ponerElementoDeLista("idContenido", series, get(LLAVE_INDICE));
+    </script>
+
+    <script>
+        // Script para alternar la visibilidad del menú desplegable
+        const menuButton = document.getElementById('menuButton');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+
+        menuButton.addEventListener('click', () => {
+            dropdownMenu.classList.toggle('active');
+        });
+
+        // Ocultar el menú si se hace clic fuera de él
+        window.addEventListener('click', (event) => {
+            if (!menuButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                dropdownMenu.classList.remove('active');
+            }
+        });
+    </script>
+
+<script>
+    document.getElementById('volver-atras').addEventListener('click', function(event) {
+    event.preventDefault();
+    window.history.back();
+  });
+</script>
+
+</body>
+</html>
